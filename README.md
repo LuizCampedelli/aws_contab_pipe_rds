@@ -73,7 +73,5 @@ Security: Ensure proper IAM roles and policies are set up to grant the necessary
 ## Contributing
 Contributions are welcome! Please fork the repository, make your changes, and submit a pull request. Ensure you follow the project's coding standards and commit messages.
 
-## License
-
 ## Contact
 For any questions or issues, please open an issue or contact LuizCampedelli.
