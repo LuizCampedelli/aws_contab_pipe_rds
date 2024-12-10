@@ -1,0 +1,9 @@
+.git
+.terraform,lock.hcl
+tfplan
+.terraform/
+.terraform/*
+**.pem
+.terraform.tfstate.lock.info
+.terraform.tfstate
+.terraplan

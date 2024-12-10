@@ -1,0 +1,33 @@
+name: Terraform CI
+
+on:
+  push:
+    branches: [ terraform ]
+  pull_request:
+    branches: [ terraform ]
+
+jobs:
+  terraform:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    # Configura o Terraform
+    - name: Setup Terraform
+      uses: hashicorp/setup-terraform@v1
+
+    # Inicializa o Terraform
+    - name: Terraform Init
+      run: terraform init
+
+    # Valida o código Terraform
+    - name: Terraform Validate
+      run: terraform validate
+
+    # Passa o segredo como variável de ambiente
+    - name: Terraform Apply
+      env:
+        RDS_PASSWORD: ${{ secrets.RDS_PASSWORD }}
+      run: |
+        terraform apply -auto-approve \
+          -var="rds_password=$RDS_PASSWORD"
