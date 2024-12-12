@@ -27,7 +27,8 @@ def main():
     # Files to upload
     files_to_upload = [
         {"file_name": "pandas_layer.zip", "object_name": "lambda_layers/pandas_layer.zip"},
-        {"file_name": "lambda.zip", "object_name": "lambda_functions/lambda.zip"}
+        {"file_name": "lambda.zip", "object_name": "lambda_functions/lambda.zip"},
+        {"file_name": "lambda_dependencies.zip", "object_name": "llambda_dependencies/lambda_dependencies.zip"}
     ]
 
     # Upload each file

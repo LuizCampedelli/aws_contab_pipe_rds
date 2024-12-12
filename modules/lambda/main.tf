@@ -46,6 +46,13 @@ resource "aws_s3_object" "pandas_layer_zip" {
   source = "pandas_layer.zip"
 }
 
+resource "aws_s3_object" "lambda_dependencies_zip" {
+  bucket = var.s3_bucket_id
+  key    = "lambda_dependencies.zip"
+  source = "lambda_dependencies.zip"
+}
+
+
 
 resource "aws_lambda_layer_version" "pandas_layer" {
   s3_bucket        = aws_s3_object.pandas_layer_zip.bucket
