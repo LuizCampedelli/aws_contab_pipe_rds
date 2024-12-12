@@ -29,6 +29,7 @@ This repository contains the infrastructure code and scripts for deploying an AW
 - **`.terraform.lock.hcl`**: Terraform lock file for managing provider versions.
 - **`lambda.zip`**: Zipped Lambda function code.
 - **`pandas_layer.zip`**: Custom Lambda layer for Pandas library.
+- **`lambda_dependencies.zip`**: Custom Lambda layer dependencies for Pandas library layer.
 - **`terraform.tfstate`**, **`terraform.tfstate.backup`**: Terraform state files.
 
 ## How to Use
