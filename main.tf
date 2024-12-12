@@ -1,6 +1,13 @@
+provider "aws" {
+  region = "us-east-1"
+}
 
 module "vpc" {
   source = "./modules/vpc"
+  vpc_cidr_block     = var.vpc_cidr_block
+  public_subnet_count = var.public_subnet_count
+  private_subnet_count = var.private_subnet_count
+  vpc_name           = var.vpc_name
 }
 
 module "ec2" {
@@ -38,6 +45,8 @@ module "rds" {
   subnet_group  = module.vpc.rds_subnet_group
   vpc_id        = module.vpc.vpc_id
   rds_password = var.rds_password
+  private_subnet_ids = module.vpc.private_subnet
+  rds_subnet_group_name = module.vpc.rds_subnet_group_name
 }
 
 module "sns" {

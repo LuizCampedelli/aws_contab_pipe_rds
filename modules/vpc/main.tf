@@ -62,7 +62,7 @@ resource "aws_subnet" "private" {
 # Subnet Group para RDS
 resource "aws_db_subnet_group" "rds_subnet_group" {
   name       = "rds-subnet-group"
-  subnet_ids = aws_subnet.private[*].id
+  subnet_ids = aws_subnet.private.*.id
 
   tags = {
     Name = "RDS Subnet Group"

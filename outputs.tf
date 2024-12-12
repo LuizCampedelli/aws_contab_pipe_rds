@@ -6,8 +6,8 @@ output "public_subnets" {
   value = module.vpc.public_subnets
 }
 
-output "private_subnets" {
-  value = module.vpc.private_subnets
+output "private_subnets_ids" {
+  value = module.vpc.private_subnet
 }
 
 output "rds_subnet_group" {

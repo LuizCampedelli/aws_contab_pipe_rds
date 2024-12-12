@@ -1,3 +1,5 @@
+data "aws_caller_identity" "current" {}
+
 locals {
   s3_bucket_arn = "arn:aws:s3:::${var.s3_bucket_name}"
   s3_bucket_objects_arn = "${local.s3_bucket_arn}/*"

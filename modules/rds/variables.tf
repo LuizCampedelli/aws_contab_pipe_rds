@@ -14,3 +14,21 @@ variable "rds_password" {
   type        = string
   sensitive   = true
 }
+
+variable "private_subnet_ids" {
+  type = list(string)
+}
+
+variable "rds_subnet_group" {
+  type = object({
+    name = string
+  })
+  description = "RDS subnet group"
+  default = {
+    name = "default-rds-subnet-group"
+  }
+}
+variable "rds_subnet_group_name" {
+  type        = string
+  description = "Name of the RDS subnet group"
+}

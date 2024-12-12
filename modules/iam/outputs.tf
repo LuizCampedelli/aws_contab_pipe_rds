@@ -28,3 +28,6 @@ output "sqs_queue_arn" {
   value = "arn:aws:sqs:${var.aws_region}:${var.aws_account_id}:${var.sqs_queue_name}"
 }
 
+output "account_id" {
+  value = data.aws_caller_identity.current.account_id
+}
