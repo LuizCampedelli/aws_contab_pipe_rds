@@ -15,7 +15,7 @@ This repository contains the infrastructure code and scripts for deploying an AW
 ## Repository Structure
 
 - **`.github/workflows/`**: Contains GitHub Actions workflow files for automating deployments.
-  - `deploy.yml`: Workflow for deploying the Lambda function and setting up the RDS instance.
+- `deploy.yml`: Workflow for deploying the Lambda function and setting up the RDS instance.
 - **`lambda_dependencies/`**: Stores dependencies required by the Lambda function.
 - **`modules/`**: Terraform modules for reusable components.
 - **`python/`**: Python scripts and libraries.
